@@ -7,7 +7,7 @@ const profileItems = [
 
 export function Hero() {
   return (
-    <section className="mx-auto grid max-w-6xl gap-14 px-6 pb-20 pt-20 sm:pb-28 sm:pt-28 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+    <section id="home" className="mx-auto grid max-w-6xl gap-14 px-6 pb-20 pt-20 sm:pb-28 sm:pt-28 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
       <div>
         <p className="mb-7 text-sm font-medium uppercase tracking-[0.24em] text-neutral-400">
           个人技术主页
@@ -29,7 +29,7 @@ export function Hero() {
         </p>
         <div className="mt-10 flex flex-wrap gap-3">
           <a
-            href="#projects"
+            href="/#projects"
             className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200"
           >
             查看项目

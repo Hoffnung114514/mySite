@@ -1,5 +1,6 @@
 import { ArticleCard } from "@/components/ArticleCard";
 import { ContactSection } from "@/components/ContactSection";
+import { FloatingNav } from "@/components/FloatingNav";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
@@ -20,7 +21,9 @@ export default function Home() {
       </div>
 
       <div className="relative z-10">
+        <div id="top-sentinel" aria-hidden="true" className="h-px" />
         <Navbar />
+        <FloatingNav />
         <Hero />
 
         <section id="tech" className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
@@ -46,6 +49,14 @@ export default function Home() {
             {projects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
+          </div>
+          <div className="mt-10 flex justify-center">
+            <a
+              href="/projects"
+              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200"
+            >
+              查看全部项目
+            </a>
           </div>
         </section>
 
