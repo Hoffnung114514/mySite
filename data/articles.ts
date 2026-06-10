@@ -8,13 +8,13 @@ export type Article = {
 export const articles: Article[] = [
   {
     title: "云计算学习路线记录",
-    summary: "记录 Linux 基础、GitHub 工作流、Vercel 部署与云平台服务发布的学习过程。",
+    summary: "梳理 Linux 基础、GitHub 工作流、Vercel 部署与云平台服务发布的学习路径。",
     date: "2026-06-10",
     href: "#"
   },
   {
     title: "AI 工程实践笔记",
-    summary: "整理 AI 工具应用、模型能力调用、工程化实践和自动化工作流中的经验。",
+    summary: "记录 AI 工具应用、模型能力调用、自动化流程和工程化实践中的经验。",
     date: "2026-06-10",
     href: "#"
   },
