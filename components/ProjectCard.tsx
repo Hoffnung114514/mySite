@@ -6,21 +6,27 @@ type ProjectCardProps = {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-slate-700/50 bg-slate-900/60 p-6 shadow-lg shadow-slate-950/20 backdrop-blur transition hover:-translate-y-1 hover:border-cyan-300/35 hover:bg-slate-900/80">
-      <div className="mb-5 h-1.5 w-16 rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-violet-400" />
-      <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-      <p className="mt-4 flex-1 text-sm leading-6 text-slate-300">{project.description}</p>
-      <div className="mt-6 flex flex-wrap gap-2">
+    <article className="flex h-full flex-col rounded-[1.75rem] border border-white/[0.12] bg-white/[0.075] p-7 shadow-xl shadow-black/15 backdrop-blur-2xl transition hover:bg-white/[0.095]">
+      <p className="text-xs font-medium uppercase tracking-[0.22em] text-neutral-500">
+        Project
+      </p>
+      <h3 className="mt-5 text-2xl font-semibold tracking-tight text-white">
+        {project.title}
+      </h3>
+      <p className="mt-5 flex-1 text-sm leading-7 text-neutral-300">
+        {project.description}
+      </p>
+      <div className="mt-8 flex flex-wrap gap-2">
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-lg border border-slate-700 bg-slate-800/80 px-3 py-1 text-xs font-medium text-cyan-100"
+            className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-medium text-neutral-300 backdrop-blur-xl"
           >
             {tag}
           </span>
         ))}
       </div>
-      <a href={project.href} className="mt-6 text-sm font-semibold text-cyan-300">
+      <a href={project.href} className="mt-8 text-sm font-semibold text-white">
         查看项目
       </a>
     </article>

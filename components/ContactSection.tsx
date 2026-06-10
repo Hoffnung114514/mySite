@@ -11,25 +11,25 @@ const contacts = [
   },
   {
     label: "Phone",
-    value: "暂不公开",
+    value: "***************",
     href: "#"
   }
 ];
 
 export function ContactSection() {
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-6 py-14 sm:py-20">
-      <div className="rounded-2xl border border-slate-700/50 bg-slate-900/60 p-8 shadow-2xl shadow-slate-950/30 backdrop-blur lg:p-10">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <section id="contact" className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+      <div className="rounded-[2rem] border border-white/[0.12] bg-white/[0.075] p-8 shadow-2xl shadow-black/20 backdrop-blur-2xl sm:p-10">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-cyan-300">
+            <p className="text-sm font-medium uppercase tracking-[0.24em] text-neutral-500">
               Contact
             </p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-white">
+            <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
               联系方式
             </h2>
-            <p className="mt-4 text-base leading-7 text-slate-300">
-              欢迎通过邮件或 GitHub 与我联系。电话信息暂不公开，后续可按需要补充。
+            <p className="mt-5 text-lg leading-8 text-neutral-300">
+              欢迎通过邮件或 GitHub 与我联系。电话信息暂不公开。
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-3">
@@ -37,10 +37,10 @@ export function ContactSection() {
               <a
                 key={contact.label}
                 href={contact.href}
-                className="rounded-xl border border-slate-700/50 bg-slate-800/60 p-5 transition hover:border-cyan-300/40 hover:bg-cyan-300/10"
+                className="rounded-3xl border border-white/10 bg-black/25 p-5 backdrop-blur-xl transition hover:bg-white/[0.08]"
               >
-                <p className="text-sm font-medium text-slate-400">{contact.label}</p>
-                <p className="mt-2 break-words text-sm font-semibold text-slate-100">
+                <p className="text-sm font-medium text-neutral-500">{contact.label}</p>
+                <p className="mt-3 break-words text-sm font-semibold text-white">
                   {contact.value}
                 </p>
               </a>

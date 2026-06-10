@@ -6,12 +6,14 @@ type SectionTitleProps = {
 
 export function SectionTitle({ eyebrow, title, description }: SectionTitleProps) {
   return (
-    <div className="max-w-2xl">
-      <p className="text-sm font-semibold uppercase tracking-wide text-cyan-300">
+    <div className="mx-auto max-w-3xl text-center">
+      <p className="text-sm font-medium uppercase tracking-[0.24em] text-neutral-500">
         {eyebrow}
       </p>
-      <h2 className="mt-3 text-3xl font-bold tracking-tight text-white">{title}</h2>
-      <p className="mt-4 text-base leading-7 text-slate-300">{description}</p>
+      <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+        {title}
+      </h2>
+      <p className="mt-5 text-lg leading-8 text-neutral-300">{description}</p>
     </div>
   );
 }
