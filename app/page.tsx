@@ -13,6 +13,7 @@ import { techStack } from "@/data/techStack";
 
 export default function Home() {
   const homepageProjects = projects.slice(0, 3);
+  const homepageArticles = articles.slice(0, 3);
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-neutral-950 text-white">
@@ -69,9 +70,17 @@ export default function Home() {
             description="整理学习路线、实践经验与阶段性总结。"
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {articles.map((article) => (
+            {homepageArticles.map((article) => (
               <ArticleCard key={article.title} article={article} />
             ))}
+          </div>
+          <div className="mt-10 flex justify-center">
+            <a
+              href="/articles"
+              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200"
+            >
+              查看全部文章
+            </a>
           </div>
         </section>
 
