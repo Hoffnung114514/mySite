@@ -7,6 +7,9 @@ import RobotstudioPalletizing, {
 import MatlabWorkspaceAnalysis, {
   metadata as matlabWorkspaceAnalysisMetadata
 } from "@/content/projects/matlab-workspace-analysis.mdx";
+import CrawlerTool, {
+  metadata as crawlerToolMetadata
+} from "@/content/projects/crawler-tool.mdx";
 
 export type ProjectMetadata = {
   id: string;
@@ -27,6 +30,10 @@ export type ProjectEntry = {
 };
 
 const projectRegistry: ProjectEntry[] = [
+  {
+    metadata: crawlerToolMetadata as ProjectMetadata,
+    Component: CrawlerTool
+  },
   {
     metadata: personalWebsiteMetadata as ProjectMetadata,
     Component: PersonalWebsite

@@ -12,6 +12,8 @@ import { projects } from "@/data/projects";
 import { techStack } from "@/data/techStack";
 
 export default function Home() {
+  const homepageProjects = projects.slice(0, 3);
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-neutral-950 text-white">
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
@@ -46,7 +48,7 @@ export default function Home() {
             description="通过实际项目记录技术学习和工程实现过程。"
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {projects.map((project) => (
+            {homepageProjects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
           </div>
