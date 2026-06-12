@@ -64,23 +64,43 @@ export default function Home() {
         </section>
 
         <section id="articles" className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-          <SectionTitle
-            eyebrow="Technical Notes"
-            title="技术文章"
-            description="整理学习路线、实践经验与阶段性总结。"
-          />
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {homepageArticles.map((article) => (
-              <ArticleCard key={article.title} article={article} />
-            ))}
-          </div>
-          <div className="mt-10 flex justify-center">
-            <a
-              href="/articles"
-              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200"
-            >
-              查看全部文章
-            </a>
+          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/[0.12] bg-white/[0.055] p-6 shadow-2xl shadow-black/20 backdrop-blur-2xl sm:p-8 lg:p-10">
+            <div className="pointer-events-none absolute -left-24 top-12 h-56 w-56 rounded-full bg-cyan-300/10 blur-3xl" />
+            <div className="pointer-events-none absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-violet-300/10 blur-3xl" />
+            <div className="relative flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p className="text-sm font-medium uppercase tracking-[0.24em] text-neutral-500">
+                  Latest Articles
+                </p>
+                <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                  最新技术文章
+                </h2>
+                <p className="mt-5 max-w-2xl text-base leading-8 text-neutral-300">
+                  整理学习路线、实践经验与阶段性总结，把项目背后的技术思考沉淀下来。
+                </p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-black/25 px-5 py-4 text-sm text-neutral-300 backdrop-blur-xl">
+                <span className="font-semibold text-white">
+                  {homepageArticles.length}
+                </span>{" "}
+                篇最新文章
+              </div>
+            </div>
+
+            <div className="relative mt-12 grid gap-6 lg:grid-cols-3">
+              {homepageArticles.map((article) => (
+                <ArticleCard key={article.title} article={article} />
+              ))}
+            </div>
+
+            <div className="relative mt-10 flex justify-center">
+              <a
+                href="/articles"
+                className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 shadow-lg shadow-white/10 transition hover:-translate-y-0.5 hover:bg-neutral-200 hover:shadow-white/20"
+              >
+                查看全部文章
+              </a>
+            </div>
           </div>
         </section>
 
