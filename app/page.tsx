@@ -43,28 +43,30 @@ export default function Home() {
         </section>
 
         <section id="projects" className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-          <SectionTitle
+          <div className="rounded-[2rem] border border-white/[0.12] bg-white/[0.075] p-8 shadow-2xl shadow-black/20 backdrop-blur-2xl sm:p-10">
+            <SectionTitle
             eyebrow="Project Practice"
             title="项目实践"
             description="通过实际项目记录技术学习和工程实现过程。"
           />
-          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {homepageProjects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
           </div>
-          <div className="mt-10 flex justify-center">
+            <div className="mt-10 flex justify-center">
             <a
               href="/projects"
               className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-950 transition hover:bg-neutral-200"
             >
               查看全部项目
             </a>
+            </div>
           </div>
         </section>
 
         <section id="articles" className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
-          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/[0.12] bg-white/[0.055] p-6 shadow-2xl shadow-black/20 backdrop-blur-2xl sm:p-8 lg:p-10">
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/[0.12] bg-white/[0.075] p-8 shadow-2xl shadow-black/20 backdrop-blur-2xl sm:p-10">
             <div className="pointer-events-none absolute -left-24 top-12 h-56 w-56 rounded-full bg-cyan-300/10 blur-3xl" />
             <div className="pointer-events-none absolute -right-20 bottom-0 h-64 w-64 rounded-full bg-violet-300/10 blur-3xl" />
             <div className="relative flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
